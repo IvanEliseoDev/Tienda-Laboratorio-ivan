@@ -17,12 +17,11 @@ export const PostPage = () => {
       try {
         const data = await getPostAction();
         
-        // CORRECCIÓN: Validamos que 'data' sea realmente un array. 
-        // Si viene envuelto en un objeto (ej: data.posts), cámbialo a: Array.isArray(data.posts) ? data.posts : ...
+       
         if (Array.isArray(data)) {
           setPosts(data);
         } else if (data && typeof data === 'object' && 'posts' in data && Array.isArray((data as any).posts)) {
-          // Por si tu API devuelve un objeto tipo { posts: [...] }
+       
           setPosts((data as any).posts);
         } else {
           console.error("La API no devolvió un array válido:", data);
