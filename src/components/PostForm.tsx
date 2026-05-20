@@ -40,6 +40,8 @@ export const PostForm = ({ editingPost, onClose }: FormProps) => {
     };
     
     if (editingPost) {
+        console.log("editando..")
+        console.log(editingPost.id)
       await putPostAction(editingPost.id, formattedData);
     } else {
       await postPostAction(formattedData);

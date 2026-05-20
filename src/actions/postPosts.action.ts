@@ -4,7 +4,7 @@ import type { postI } from "../interfaces/postI.interrface";
 
 export const postPostAction = async(postData):Promise<postI[]> => {
     try {
-        const {data} = await Tienda_API.post("/post", postData)
+        const {data} = await Tienda_API.post("/posts", postData)
         return data
     } catch (error) {
         console.log(error)

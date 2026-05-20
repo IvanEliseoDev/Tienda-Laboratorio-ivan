@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { useNavigate } from "react-router";
 
 export const HomePage = () => {
-  const { user } = useAuthStore();
+
   const navigate = useNavigate()
   return (
     <div className="min-h-screen bg-slate-50  sticky top-0 z-10 px-4 py-4 md:px-8 flex justify-between items-center">
